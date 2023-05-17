@@ -1,0 +1,41 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100hv;
+    background-color: #ffffff;
+    
+}
+.container{
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 1000px;
+    height: 300px;
+    border: 1px solid black;
+    display: flex;
+    float: left;
+}
+.part-1{
+    background-color: #ffffff;
+    width: 500px;
+    height: 300px;
+    margin: 0;
+    padding:0 ; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.part-2{
+    margin: 0;
+    padding:0 ;
+    background-image: url(./bg/Screenshot\ 2023-05-11\ 194806.png);
+    width: 500px;
+    height: 300px;
+}
+.container:hover{
+    background-color: #bbbbbb;
+    opacity: 0.1;
+}

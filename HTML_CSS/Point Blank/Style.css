@@ -1,0 +1,102 @@
+body{
+    font-family: "PT Sans","Helvetica Neue",Arial,sans-serif;
+    margin:0;
+    padding: 0; 
+}
+.main-nav{
+    margin: 10px;
+    display: flex;
+}
+.main-nav img{
+    margin: 0;
+    width:50px;
+    height:50px;
+}
+
+.main-nav ul{   
+    color:#201f27;
+    list-style-type: none;
+    width: 610px;
+    justify-content: space-between;
+    align-items: center;
+    display: flex; 
+    padding:0;
+    margin-left: 10px;
+    margin-right: 250px;
+}
+.icon-user{  
+    padding: 15px;
+    margin: 0; 
+    width:40px;
+    height:20px; 
+    text-align:center;
+} 
+.main-nav a{
+    margin-right: 20px;
+    text-decoration: none;
+    font-size: 16px;
+    color:#201f27;
+} 
+.main-nav ul li:hover{ 
+    color: #f59905;
+}
+
+
+.main-button-div{
+    margin: 0;
+    padding: 0;
+}
+.main-button-div .btn-download{
+    background-color: #f3b304;
+    border-radius: 5px;
+    border: none;
+    font-size: 14px;
+    height: 40px;
+    width: 200px;
+    margin-left: 50px;
+    color: #201f27;
+}
+.btn-download:hover{
+    transform: translateY(-10px);
+    background-color: #f59905; 
+}
+
+
+
+.main-menu{
+    background-color: #eeecec;
+    display: flex;
+}
+.main-menu ul{  
+    color:#201f27;
+    list-style-type: none;
+    width:620px;
+    justify-content: space-between;
+    align-items: center;
+    display: flex; 
+    padding:0;
+    margin-left: 10px;
+    margin-right: 250px;
+}
+.main-menu a{
+    font-size: 12px;
+    margin-right: 20px;
+    text-decoration: none; 
+    color:#201f27;
+} 
+.main-menu ul li:hover{ 
+    color: #f59905;
+}
+
+
+.background-div{
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    background-position: center;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(rgba(0,0,0,0.7),
+    rgba(0,0,0,0.7)),url("./Images/PointBlankBacground.jpg");
+}

@@ -1,0 +1,72 @@
+body{
+    padding: 0;
+    margin: 0;
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
+.container{
+    position: relative;
+    height: 300px;
+    width: 250px;
+    border: 5px solid #252525;
+    color: #252525;
+}
+
+.container p{ 
+    width: 250px; 
+    height: 250px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    text-align: center;
+}
+.content{
+    display: flex;
+    align-content: center;
+    width: 250px;
+    height: 250px;
+    padding: 0;
+    margin: 0;
+}
+
+.door{
+    background-color: #252525;
+    position: absolute;
+    height: 100%;
+    width: 50%;
+}
+
+.left-door{
+    top: 0;
+    left: 0;
+    background-color: #482d2d;
+    border-right:1px solid #252525;
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    transition: transform 0.5s;
+    transform-origin: left;
+}
+.right-door{
+    top: 0;
+    right: 0;
+    background-color: #482d2d;
+    border-left:1px solid #252525;
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    transition: transform 0.5s;
+    transform-origin: right;
+}
+
+.container:hover .right-door{
+    transform: rotateY(140deg)
+}
+
+.container:hover .left-door{
+    transform: rotateY(-140deg)
+}
