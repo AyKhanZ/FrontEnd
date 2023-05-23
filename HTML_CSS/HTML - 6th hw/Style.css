@@ -3,7 +3,6 @@
     margin: 0; 
     font-family: monospace;
 }
-
 ul{
     list-style: none;
     background: #22438C;
@@ -11,7 +10,7 @@ ul{
 ul li{
     display: inline-block;
     position: relative;
-} 
+}
 ul li a{
     display: block;
     padding: 20px 25px;
@@ -32,8 +31,26 @@ ul li ul.dropdown{
     display: none;
     position: absolute;
     z-index: 999;
-    background: #22438C; 
-} 
+    background: #22438C;
+}
 ul li:hover ul.dropdown{
     display: block;
+}
+
+
+
+@media screen and (min-width: 1008px) {
+    ul{
+        background: #22438C !important;
+    }
+}
+@media screen and (min-width: 641px) and (max-width: 1007px) {
+    ul {
+        background-color: greenyellow !important;
+    }
+}
+@media screen and (max-width: 640px) {
+    ul {
+        background-color: darkred !important;
+    }
 }
