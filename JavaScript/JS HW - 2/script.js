@@ -23,16 +23,15 @@ function numsInString()
     let result = String(n1)+String(n2)+String(n3)
     alert(result)
 };
-
 function squareRectangel()
 {
-    var length = prompt("Enter length:");
-    var width = prompt("Enter width:");
+    let length = prompt("Enter length:");
+    let width = prompt("Enter width:");
   
     length = Number(length);
     width = Number(width);
-  
-    var area;
+
+    let area;
   
     if (width === undefined) {
       area = length * length;
@@ -44,93 +43,83 @@ function squareRectangel()
 };
 function checkPerfectNumber() 
 {
-    var num = prompt("Enter the number:");
-  
-    num = Number(num);
-  
-    var sum = 0;
-  
-    for (var i = 1; i < num; i++) {
-      if (num % i === 0) {
-        sum += i;
-      }
+    let number = Number(prompt("Enter number: "))
+    // 6       1 + 2 + 3 = 6
+    let sum = 0;
+
+    for(let i = 1;i < number;i++){
+        if(number % i == 0) sum += i;
     }
-  
-    var isPerfect = sum === num;
-  
-    alert("The number " + num + (isPerfect ? " is " : " is not") + " perfect.");
-} 
+
+    alert( number == sum ? "Perfect!" : "Not perfect!" )
+}
 function displayPerfectNumbersInRange() 
 {
-    var min = prompt("Enter the minimum value:");
-    var max = prompt("Enter the maximum value:");
-  
-    min = Number(min);
-    max = Number(max);
-  
-    var perfectNumbers = "";
-  
-    for (var i = min; i <= max; i++) {
-      if (checkPerfectNumberHelper(i)) {
-        perfectNumbers += i + " ";
-      }
+    let min = Number(prompt("Enter the minimum value:"));
+    let max = Number(prompt("Enter the maximum value:"));
+
+    let perfectNumbers = [];
+
+    for (let i = min; i <= max; i++) {
+        let sum = 0;
+
+        for(let j = 1;j < i;j++){
+            if(i % j == 0) sum += j;
+        }
+
+        if (i == sum ? true : false) {
+            perfectNumbers.push(i);
+        }
     }
   
-    if (perfectNumbers === "") {
-      alert("There are no perfect numbers in the specified range.");
-    } else {
-      alert("Perfect numbers in the specified range: " + perfectNumbers);
+    if (perfectNumbers.length === 0) {
+        alert("There are no perfect numbers in the specified range.");
     }
-} 
+    else{
+        alert("There are perfect numbers in the specified range!!!!!!!!!!");
+    }
+}
 function displayTime() {
-  var hours = prompt("Enter hours:");
-  var minutes = prompt("Enter minutes:");
-  var seconds = prompt("Enter seconds:");
+  let hours = Number(prompt("Enter hours:"));
+  let minutes = Number(prompt("Enter minutes:"));
+  let seconds = Number(prompt("Enter seconds:"));
 
-  hours = Number(hours);
-  minutes = Number(minutes);
-  seconds = Number(seconds);
 
-  var formattedHours = hours < 10 ? "0" + hours : hours;
-  var formattedMinutes = minutes < 10 ? "0" + minutes : minutes;
-  var formattedSeconds = seconds < 10 ? "0" + seconds : seconds;
+  let formattedHours = hours < 10 ? "0" + hours : hours;
+  let formattedMinutes = minutes < 10 ? "0" + minutes : minutes;
+  let formattedSeconds = seconds < 10 ? "0" + seconds : seconds;
 
   alert("Time: " + formattedHours + ":" + formattedMinutes + ":" + formattedSeconds);
-} 
+}
 function convertToSeconds() 
 {
-  var hours = prompt("Enter hours:");
-  var minutes = prompt("Enter minutes:");
-  var seconds = prompt("Enter seconds:");
+  let hours = Number(prompt("Enter hours:"));
+  let minutes = Number(prompt("Enter minutes:"));
+  let seconds = Number(prompt("Enter seconds:"));
 
-  hours = Number(hours);
-  minutes = Number(minutes);
-  seconds = Number(seconds);
-
-  var totalSeconds = hours * 3600 + minutes * 60 + seconds;
+  let totalSeconds = hours * 3600 + minutes * 60 + seconds;
 
   alert(totalSeconds);
 }  
 function convertToTime() 
 {
-  var seconds = prompt("Enter seconds:")
-  var hours = Math.floor(seconds / 3600);
-  var minutes = Math.floor((seconds % 3600) / 60);
-  var remainingSeconds = seconds % 60;
+  let seconds = prompt("Enter seconds:")
+  let hours = Math.floor(seconds / 3600);
+  let minutes = Math.floor((seconds % 3600) / 60);
+  let remainingSeconds = seconds % 60;
   
-  var formattedHours = hours < 10 ? "0" + hours : hours;
-  var formattedMinutes = minutes < 10 ? "0" + minutes : minutes;
-  var formattedSeconds = remainingSeconds < 10 ? "0" + remainingSeconds : remainingSeconds;
+  let formattedHours = hours < 10 ? "0" + hours : hours;
+  let formattedMinutes = minutes < 10 ? "0" + minutes : minutes;
+  let formattedSeconds = remainingSeconds < 10 ? "0" + remainingSeconds : remainingSeconds;
   
   alert(formattedHours + ":" + formattedMinutes + ":" + formattedSeconds);
 } 
 function getTimeDifference(hours1, minutes1, seconds1, hours2, minutes2, seconds2) 
 {
-
-  var totalSeconds1 = convertToSeconds(hours1, minutes1, seconds1);
-  var totalSeconds2 = convertToSeconds(hours2, minutes2, seconds2);
+  let totalSeconds1 = convertToSeconds(hours1, minutes1, seconds1);
+  let totalSeconds2 = convertToSeconds(hours2, minutes2, seconds2);
   
-  var differenceInSeconds = Math.abs(totalSeconds1 - totalSeconds2);
+  let differenceInSeconds = Math.abs(totalSeconds1 - totalSeconds2);
   
   return convertToTime(differenceInSeconds);
 }
