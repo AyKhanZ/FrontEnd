@@ -96,3 +96,30 @@ function MathSolver()
     alert("Сокращенная дробь:", simplifiedFraction.numerator + "/" + simplifiedFraction.denominator);
 
 }
+function Time()
+{
+    let time ={
+        sec:"0",
+        min:"0",
+        hour:"0",
+        GetInformation:function() { 
+            alert("Time:   "+ this.sec.length == 2?this.sec:"0"+this.sec 
+            + ":" + this.min.length == 2?this.min:"0"+this.min
+            + ":" + this.hour.length == 2?this.hour:"0"+this.hour);
+        },
+        setSec: function (sec){
+            this.sec = sec
+        },
+        setMin: function (min){
+            this.min = min
+        },
+        setHour: function (hour){
+            this.hour = hour
+        }
+    }
+    alert(time.sec.length);
+    time.setSec(50);
+    time.setMin(20);
+    time.setHour(10);
+    time.GetInformation();
+}
