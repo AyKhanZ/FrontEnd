@@ -13,4 +13,5 @@ addButton.addEventListener("click", function() {
 
         taskList.appendChild(newTask); // Добавляем новую задачу в список
         taskInput.value = ""; // Очищаем поле ввода
-    }});
+    }
+});
