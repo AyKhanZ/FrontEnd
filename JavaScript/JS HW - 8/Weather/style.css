@@ -1,0 +1,45 @@
+body {
+    background-image: url('https://www.capetownetc.com/wp-content/uploads/2022/11/pexels-roberto-nickson-2775196-1024x576.jpg');
+    background-size: cover;
+}
+
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background-color: darkcyan;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+h1{
+    font-family: "Times New Roman";
+}
+input {
+    padding: 1rem;
+    border-radius: 25px;
+    border: black;
+    background-color: #fff;
+    font-family: "Kaiti SC";
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    min-width: 400px;
+    font-size: 1rem;
+}
+input:focus {
+    outline: none;
+}
+.weather {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.weather h2 {
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+} /* .weather img
